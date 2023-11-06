@@ -7,7 +7,7 @@ const Navbar = () => {
   const {logoutUser, user} = useAuthProvider()
   const navLinks = <>
     <li> <NavLink to={'/'}>Home</NavLink></li>
-    <li> <NavLink to={''}>Add Job</NavLink></li>
+    <li> <NavLink to={'/addjobs'}>Add Job</NavLink></li>
     <li> <NavLink to={''}>My Posted Jobs</NavLink></li>
     <li> <NavLink to={''}>My Bids</NavLink></li>
     <li> <NavLink to={''}>Bid Requests</NavLink></li>

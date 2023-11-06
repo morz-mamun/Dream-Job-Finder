@@ -11,6 +11,7 @@ import Home from './Components/Pages/Home/Home.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
 import Login from './Components/Pages/Login/Login.jsx';
 import Registration from './Components/Pages/Registration/Registration.jsx';
+import AddJobs from './Components/Pages/AddJobs/AddJobs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: '/login',
         element: <Login></Login>
       },
+      {
+        path: '/addjobs',
+        element: <AddJobs></AddJobs>
+      }
       
     ]
   },
