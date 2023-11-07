@@ -8,8 +8,8 @@ const Navbar = () => {
   const navLinks = <>
     <li> <NavLink to={'/'}>Home</NavLink></li>
     <li> <NavLink to={'/addjobs'}>Add Job</NavLink></li>
-    <li> <NavLink to={''}>My Posted Jobs</NavLink></li>
-    <li> <NavLink to={''}>My Bids</NavLink></li>
+    <li> <NavLink to={'/mypostedJobs'}>My Posted Jobs</NavLink></li>
+    <li> <NavLink to={'/mybids'}>My Bids</NavLink></li>
     <li> <NavLink to={''}>Bid Requests</NavLink></li>
     <li> <NavLink to={'/registration'}>Registration</NavLink></li>
    

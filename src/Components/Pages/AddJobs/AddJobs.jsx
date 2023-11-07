@@ -1,8 +1,12 @@
 import axios from "axios";
 import useAuthProvider from "../../../CustomHooks/useAuthProvider";
 import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
+
+
 const AddJobs = () => {
   const {user} = useAuthProvider()
+  const navigate = useNavigate()
 
   const Toast = Swal.mixin({
     toast: true,
@@ -45,6 +49,7 @@ const AddJobs = () => {
           title: 'Job added successfully'
         })
       }
+      navigate('/mypostedJobs')
     })
     
     

@@ -56,6 +56,7 @@ const Login = () => {
           })
         }
         form.reset()
+        navigate('/')
       })
       .catch(() => {
         Toast.fire({
@@ -63,7 +64,7 @@ const Login = () => {
           title: 'Checked your email and password.'
         })
       })
-    navigate('/')
+    
   }
 
   return (
