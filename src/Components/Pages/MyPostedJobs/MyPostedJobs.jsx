@@ -3,11 +3,28 @@ import { useLoaderData } from "react-router-dom";
 import JobCard from "./JobCard";
 import { useState } from "react";
 import Swal from 'sweetalert2'
+import { useEffect } from "react";
+import useAuthProvider from "../../../CustomHooks/useAuthProvider";
 
 const MyPostedJobs = () => {
-    const loadedJobs = useLoaderData()
+  const {user} = useAuthProvider()
+    // const loadedJobs = useLoaderData()
+  
+    
+    
+    const [allPostedJobs, setAllPostedJobs] = useState([])
+   
+    useEffect(() => {
+        fetch(`http://localhost:5000/${user.email}`)
+        .then(res => res.json())
+        .then(data => {
+          setAllPostedJobs(data)
+        })
+    }, [])
 
-    const [allPostedJobs, setAllPostedJobs] = useState(loadedJobs)
+    // console.log(postedJobs);
+    console.log(allPostedJobs);
+
 
 
 

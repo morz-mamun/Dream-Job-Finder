@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 
 const JobDetails = () => {
     const loadedJob = useLoaderData()
+    console.log(loadedJob);
     const {user} = useAuthProvider()
     const navigate = useNavigate()
 
@@ -28,8 +29,9 @@ const JobDetails = () => {
         const deadline = form.deadline.value
         const userEmail = form.userEmail.value
         const buyerEmail = form.buyerEmail.value
+        const jobTitle = form.jobTitle.value
 
-        const bidProject = {price, deadline, userEmail, buyerEmail}
+        const bidProject = {price, deadline, userEmail, buyerEmail, jobTitle}
 
         axios.post('http://localhost:5000/bidprojects', bidProject)
         .then(res => {
@@ -115,7 +117,7 @@ const JobDetails = () => {
               </label>
               <input
                 type="email"
-                defaultValue={loadedJob[0].email}
+                defaultValue={loadedJob[0]?.email}
                 name="buyerEmail"
                 placeholder="Buyer Email"
                 className="input input-bordered"
@@ -123,9 +125,22 @@ const JobDetails = () => {
               />
             </div>
           </div>
+          <div className="form-control w-full">
+              <label className="label">
+                <span className="font-bold">Job Title</span>
+              </label>
+              <input
+                type="text"
+                defaultValue={loadedJob[0].jobTitle}
+                name="jobTitle"
+                placeholder="Buyer Email"
+                className="input input-bordered"
+                readOnly
+              />
+            </div>
             <div className=" text-center mt-6">
                 {
-                    user?.email === loadedJob[0].email ?   <input type="submit" value="Bid on the project" disabled className="btn btn-secondary input input-bordered text-black" /> : 
+                    user?.email === loadedJob[0]?.email ?   <input type="submit" value="Bid on the project" disabled className="btn btn-secondary input input-bordered text-black" /> : 
 
                     <input type="submit" value="Bid on the project" className="btn btn-secondary input input-bordered text-black" />
                 }

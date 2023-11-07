@@ -28,7 +28,7 @@ const Card = ({ job }) => {
           </h1>
         </div>
         <div className="text-center mb-5">
-        <Link to={`/jobDetails/${_id}`}> <button className="btn btn-secondary text-black">Bid Now</button></Link>
+        <Link to={`/${category}/${_id}`}> <button className="btn btn-secondary text-black">Bid Now</button></Link>
      </div>
     </div>
   );
