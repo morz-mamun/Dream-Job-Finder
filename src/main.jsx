@@ -15,6 +15,8 @@ import AddJobs from './Components/Pages/AddJobs/AddJobs.jsx';
 import JobDetails from './Components/Pages/JobDetails/JobDetails.jsx';
 import MyBid from './Components/Pages/MyBid/MyBid.jsx';
 import MyPostedJobs from './Components/Pages/MyPostedJobs/MyPostedJobs.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import Update from './Components/Pages/Update/Update.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,8 +50,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/mypostedJobs',
-        element: <MyPostedJobs></MyPostedJobs>
+        element: <PrivateRoute>
+          <MyPostedJobs></MyPostedJobs>
+        </PrivateRoute>,
+        // loader: () => fetch('http://localhost:5000/addjobs')
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/${params.id}`)
       }
+
 
       
     ]
