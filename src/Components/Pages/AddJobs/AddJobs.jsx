@@ -1,7 +1,20 @@
+import axios from "axios";
 import useAuthProvider from "../../../CustomHooks/useAuthProvider";
-
+import Swal from 'sweetalert2'
 const AddJobs = () => {
   const {user} = useAuthProvider()
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
   const handleAddJob = (e) => {
     e.preventDefault()
@@ -16,6 +29,24 @@ const AddJobs = () => {
 
     form.reset()
     const newJob = {email, jobTitle, deadline, description, minimumPrice, maximumPrice, category}
+
+    fetch('http://localhost:5000/addjobs', {
+      method: "POST",
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newJob)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.acknowledged){
+        Toast.fire({
+          icon: 'success',
+          title: 'Job added successfully'
+        })
+      }
+    })
+    
     
   }
   return (
@@ -111,8 +142,8 @@ const AddJobs = () => {
               </label>
               <select name="category" id="" className="input input-bordered"> 
                 <option value="Web Development">Web Development</option>
-                <option value=" Digital Marketing"> Digital Marketing,</option>
-                <option value="Graphics Design">Graphics Design,</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Graphics Design">Graphics Design</option>
               </select>
             </div>
             <div className=" text-center mt-6">

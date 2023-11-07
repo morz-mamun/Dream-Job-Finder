@@ -1,11 +1,16 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import WebDevelopment from "../../Category/WebDevelopment/WebDevelopment";
+import DigitalMarketing from "../../Category/DigitalMarketing/DigitalMarketing";
+import GraphicsDesign from "../../Category/GraphicsDesign/GraphicsDesign";
+
 
 const JobCategory = () => {
+
   return (
-    <div className="max-w-7xl mx-auto my-20"> 
-        <p className="text-5xl text-center mb-10">Job Category</p>
+    <div className="max-w-7xl mx-auto my-20">
+      <p className="text-5xl text-center mb-10">Job Category</p>
       <Tabs>
         <TabList>
           <Tab>Web Development</Tab>
@@ -14,13 +19,13 @@ const JobCategory = () => {
         </TabList>
 
         <TabPanel>
-          <h2>Any content 1</h2>
+         <WebDevelopment></WebDevelopment>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+          <DigitalMarketing></DigitalMarketing>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 3</h2>
+          <GraphicsDesign></GraphicsDesign>
         </TabPanel>
       </Tabs>
     </div>
