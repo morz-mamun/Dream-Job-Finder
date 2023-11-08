@@ -6,7 +6,7 @@ const GraphicsDesign = () => {
   const [allJobs, setAllJobs] = useState([]);
   useEffect(() => {
     axios
-      .get(" https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/addjobs/Graphics%20Design")
+      .get("https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/addjobs/Graphics%20Design")
       .then((res) => {
         setAllJobs(res.data);
       });

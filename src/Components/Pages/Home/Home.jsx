@@ -7,13 +7,6 @@ import { useLocation } from "react-router-dom";
 import {Helmet} from "react-helmet";
 
 const Home = () => {
-    // const location = useLocation()
-
-    // const routeName = location.pathname === '/' ? 'Home' : location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.substring(2)
-
-    // useEffect(() => {
-    //     document.title = `Dream Job/${routeName}`
-    // },[routeName])
   return (
     <div>
         <Helmet>
