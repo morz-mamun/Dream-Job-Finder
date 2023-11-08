@@ -5,6 +5,7 @@ import { useState } from "react";
 import Swal from 'sweetalert2'
 import { useEffect } from "react";
 import useAuthProvider from "../../../CustomHooks/useAuthProvider";
+import { Helmet } from "react-helmet";
 
 const MyPostedJobs = () => {
   const {user} = useAuthProvider()
@@ -65,7 +66,11 @@ const MyPostedJobs = () => {
       }
 
     return (
-        <div className="max-w-7xl mx-auto">
+       <div>
+        <Helmet>
+          <title>Dream Job | MyPostedJobs</title>
+        </Helmet>
+         <div className="max-w-7xl mx-auto">
             <h1 className="text-center mt-10 text-3xl uppercase border-b-4 border-secondary w-fit mx-auto">All Posted Jobs</h1>
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
             {
@@ -73,6 +78,7 @@ const MyPostedJobs = () => {
             }
            </div>
         </div>
+       </div>
     );
 };
 

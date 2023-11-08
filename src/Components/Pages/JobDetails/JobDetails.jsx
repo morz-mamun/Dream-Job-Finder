@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import useAuthProvider from "../../../CustomHooks/useAuthProvider";
 import axios from "axios";
 import Swal from 'sweetalert2'
+import { Helmet } from "react-helmet";
 
 
 const JobDetails = () => {
@@ -46,7 +47,11 @@ const JobDetails = () => {
         })
     }
     return (
-      <div className="max-w-7xl mx-auto min-h-screen">
+    <div>
+      <Helmet>
+        <title>Dream Job | JobDetails</title>
+      </Helmet>
+        <div className="max-w-7xl mx-auto min-h-screen">
          <div className="flex justify-center mt-20">
         {
             loadedJob.map(job =>  <div key={job._id} className="card rounded-lg hover:bg-gray-600 hover:text-white rounded-t-md border-2 border-black border-s-fuchsia-300 h-full bg-pink-50 w-2/3">
@@ -152,6 +157,7 @@ const JobDetails = () => {
       </div>
        </div>
       </div>
+    </div>
     );
 };
 

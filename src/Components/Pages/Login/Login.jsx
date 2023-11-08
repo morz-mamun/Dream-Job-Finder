@@ -3,6 +3,7 @@ import login2 from '../../../assets/login2.jpg'
 import Swal from 'sweetalert2'
 import { FcGoogle } from "react-icons/fc";
 import useAuthProvider from '../../../CustomHooks/useAuthProvider';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -69,6 +70,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+      <title>Dream Job | Login</title>
+      </Helmet>
       <div className="hero md:min-h-screen" style={{ backgroundImage: `url(${login2})` }}>
         <div className="hero-overlay bg-opacity-80"></div>
 

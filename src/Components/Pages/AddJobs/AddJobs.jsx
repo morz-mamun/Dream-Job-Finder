@@ -2,6 +2,7 @@ import axios from "axios";
 import useAuthProvider from "../../../CustomHooks/useAuthProvider";
 import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const AddJobs = () => {
@@ -55,7 +56,11 @@ const AddJobs = () => {
     
   }
   return (
-    <div className=" flex items-center justify-center max-w-7xl mx-auto min-h-screen">
+   <div>
+    <Helmet>
+      <title>Dream Job | AddJobs</title>
+    </Helmet>
+     <div className=" flex items-center justify-center max-w-7xl mx-auto min-h-screen">
       <div className="card-body bg-base-200 rounded-lg">
         <p className="text-3xl text-center underline underline-offset-4 mb-5">Add Job</p>
         <form onSubmit={handleAddJob}>
@@ -157,6 +162,7 @@ const AddJobs = () => {
         </form>
       </div>
     </div>
+   </div>
   );
 };
 

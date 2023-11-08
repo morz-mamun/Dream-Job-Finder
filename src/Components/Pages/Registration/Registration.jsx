@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import Swal from 'sweetalert2'
 import useAuthProvider from '../../../CustomHooks/useAuthProvider';
+import { Helmet } from 'react-helmet';
 
 const Registration = () => {
   const { createUser, userProfileUpdate} = useAuthProvider()
@@ -75,6 +76,9 @@ const Registration = () => {
   }
   return (
     <div>
+      <Helmet>
+      <title>Dream Job | Registration</title>
+      </Helmet>
       <div className="hero md:min-h-screen" style={{ backgroundImage: `url(${login})` }}>
         <div className="hero-overlay bg-opacity-80"></div>
 
