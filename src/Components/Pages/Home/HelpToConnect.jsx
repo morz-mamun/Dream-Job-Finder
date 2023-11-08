@@ -3,8 +3,8 @@ import help from "../../../assets/help.jpg"
 
 const HelpToConnect = () => {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-4">
-      <div className="">
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row px-4 my-16">
+      <div className="flex items-center">
         <img src={help} alt="" />
       </div>
       <div className="flex items-center">
@@ -20,8 +20,10 @@ const HelpToConnect = () => {
           the job-hunting experience more efficient and effective.
         </p>
 
-        <button className="btn btn-primary mr-10">Get Started</button>
+        <div className="flex gap-5">
+        <button className="btn btn-primary">Get Started</button>
         <button className="btn btn-secondary">Upload Resume</button>
+        </div>
       </div>
       </div>
     </div>
