@@ -16,7 +16,7 @@ const MyPostedJobs = () => {
     const [allPostedJobs, setAllPostedJobs] = useState([])
    
     useEffect(() => {
-        fetch(` https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/${user.email}`)
+        fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/${user.email}`)
         .then(res => res.json())
         .then(data => {
           setAllPostedJobs(data)
@@ -42,7 +42,7 @@ const MyPostedJobs = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(` https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/addjobs/${id}`, {
+                fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/addjobs/${id}`, {
                     method: 'DELETE'
                   })
                   .then(res => res.json())
