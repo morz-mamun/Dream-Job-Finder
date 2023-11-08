@@ -11,7 +11,7 @@ const MoreExplore = () => {
         <div className="relative">
           <div className="card card-compact  bg-base-100 shadow-xl">
             <figure>
-              <img src={explore1} alt="Shoes" />
+              <img src={explore3} alt="Shoes" />
             </figure>
           </div>
           <div className=" md:w-80 bg-base-100  p-8 shadow-xl absolute -bottom-44 space-y-5">
@@ -26,11 +26,11 @@ const MoreExplore = () => {
         <div className="relative">
           <div className="card card-compact  bg-base-100 shadow-xl">
             <figure>
-              <img src={explore1} alt="Shoes" />
+              <img src={explore2} alt="Shoes" />
             </figure>
           </div>
           <div className=" md:w-80 bg-base-100  p-8 shadow-xl absolute -bottom-44 space-y-5">
-            <h1 className="text-xl font-bold">Best Awarded Jobs Near You.</h1>
+            <h1 className="text-xl font-bold">Basic Job Instruction Course.</h1>
             <p>
               Our Academy is an online learning platform that provides one of the
               best e-learning Academy.
@@ -46,7 +46,7 @@ const MoreExplore = () => {
             </figure>
           </div>
           <div className=" md:w-80 bg-base-100  p-8 shadow-xl absolute -bottom-44 space-y-5">
-            <h1 className="text-xl font-bold">Best Awarded Jobs Near You.</h1>
+            <h1 className="text-xl font-bold">Live Income By Our Trending Course.</h1>
             <p>
               Our Academy is an online learning platform that provides one of the
               best e-learning Academy.
