@@ -59,7 +59,7 @@ const Toast = Swal.mixin({
     <a className="btn btn-ghost uppercase md:text-xl "><span className="text-secondary">Dream</span> Job</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 bg-slate-800 rounded-lg text-white">
+    <ul className="menu menu-horizontal px-1 rounded-lg">
       { navLinks}
     </ul>
   </div>
