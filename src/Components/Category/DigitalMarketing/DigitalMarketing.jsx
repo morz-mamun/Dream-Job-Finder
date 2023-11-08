@@ -7,7 +7,7 @@ import Card from '../WebDevelopment/Card';
 const DigitalMarketing = () => {
     const [allJobs, setAllJobs] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/addjobs/Digital%20Marketing')
+        axios.get(' https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/addjobs/Digital%20Marketing')
         .then(res => {
             setAllJobs(res.data)
         })

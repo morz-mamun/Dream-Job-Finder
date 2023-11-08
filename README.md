@@ -1,8 +1,20 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title
 
-Currently, two official plugins are available:
+Dream Job
+Find The Right Jobs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Website Features 
+
+- Full responsive navbar with active routes and toggle login and logout button.
+-In the home page anyone can category wise job if they want to bid the job they have to login or registration first.
+-After user register or login they will enter to the private routes and see private details also.
+- When user login User Can post category wise job post for hiring employee.
+- User can see all the posted job that he/she posted. Also can update and delete posted jobs if they want.
+- When user register or login in website user will see their name and photo beside logout button.
+
+
+## 🔗 Website Live Link
+ [![Website live link](https://img.shields.io/badge/TechNexa-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://technexa-eef36.web.app/)
+

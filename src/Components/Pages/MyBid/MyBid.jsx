@@ -10,12 +10,12 @@ const MyBid = () => {
 
   const [bidProjects, setBidProjects] = useState([]);
 
-  const url = `http://localhost:5000/bidprojects?email=${user?.email}`;
+  const url = ` https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/bidprojects?email=${user?.email}`;
   useEffect(() => {
     axios.get(url).then((res) => {
       setBidProjects(res.data);
     });
-  }, []);
+  }, [url]);
 
   return (
    <div>

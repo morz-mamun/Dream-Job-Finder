@@ -6,7 +6,7 @@ import Card from './Card';
 const WebDevelopment = () => {
     const [allJobs, setAllJobs] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/addjobs/web%20development')
+        axios.get(' https://dream-job-finder-server-ahb4czqop-mamuns-projects.vercel.app/addjobs/web%20development')
         .then(res => {
             setAllJobs(res.data)
         })
