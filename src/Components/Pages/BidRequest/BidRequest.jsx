@@ -18,7 +18,43 @@ const BidRequest = () => {
 
 
   const handleAccept = (id) => {
-    
+    fetch(`http://localhost:5000/bidprojects/${user?.email}/${id}`, {
+        method: "PATCH",
+        headers: {
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify({status: 'In Progress'})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.modifiedCount > 0){
+            const remaining = allBidProject.filter(project => project._id !== id)
+            const updated = allBidProject.find(project => project._id === id)
+            updated.status = 'In Progress'
+            const newAllBidProject = [updated, ...remaining]
+            setAllBidProject(newAllBidProject)
+        }
+    })
+  }
+
+  const handleReject = (id) => {
+    fetch(`http://localhost:5000/bidprojects/${user?.email}/${id}`, {
+        method: "PATCH",
+        headers: {
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify({status: 'Canceled'})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.modifiedCount > 0){
+            const remaining = allBidProject.filter(project => project._id !== id)
+            const updated = allBidProject.find(project => project._id === id)
+            updated.status = 'Canceled'
+            const newAllBidProject = [updated, ...remaining]
+            setAllBidProject(newAllBidProject)
+        }
+    })
   }
 
   return (
@@ -48,6 +84,8 @@ const BidRequest = () => {
                 <BidRequestRow
                   key={project._id}
                   project={project}
+                  handleAccept={handleAccept}
+                  handleReject={handleReject}
                 ></BidRequestRow>
               ))}
             </tbody>

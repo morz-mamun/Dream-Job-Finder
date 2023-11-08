@@ -27,7 +27,7 @@ const MyBid = () => {
       <div className="overflow-x-aut">
         <table className="table">
           {/* head */}
-          <thead>
+          <thead className="text-black text-lg" >
             <tr>
               <th>Job Title</th>
               <th>Email</th>

@@ -56,11 +56,11 @@ const Toast = Swal.mixin({
     <div className="w-6 h-6 md:w-10 md:h-10">
         <img className="rounded-full" src={logo} alt="" />
       </div>
-    <a className="btn btn-ghost normal-case md:text-xl">Dream Job</a>
+    <a className="btn btn-ghost uppercase md:text-xl "><span className="text-secondary">Dream</span> Job</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      {navLinks}
+    <ul className="menu menu-horizontal px-1 bg-slate-800 rounded-lg text-white">
+      { navLinks}
     </ul>
   </div>
   <div className="navbar-end">
