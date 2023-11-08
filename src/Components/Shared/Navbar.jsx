@@ -65,14 +65,14 @@ const Toast = Swal.mixin({
   </div>
   <div className="navbar-end">
     {
-      user ? <div className="flex items-center">
+      user ? <div className="flex items-center gap-2">
          <img className="w-10 h-10 rounded-full" src={user.photoURL} alt="" />
-        <p>{user.displayName}</p>
+        <p className="text-sm font-bold">{user.displayName}</p>
         </div>: ''
     }
     {
-      user ? <button onClick={handleLogoutUser} className="btn  text-black btn-secondary">Logout</button> : 
-      <Link to={'/login'}><button className="btn  text-black btn-secondary">Login</button></Link>
+      user ? <button onClick={handleLogoutUser} className="btn btn-outline btn-sm btn-secondary ml-1">Logout</button> : 
+      <Link to={'/login'}><button className="btn btn-outline text-black btn-secondary btn-sm ml-1">Login</button></Link>
     }
     
    

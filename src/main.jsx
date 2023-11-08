@@ -72,7 +72,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/bidRequest",
-        element: <BidRequest></BidRequest>,
+        element: <PrivateRoute><BidRequest></BidRequest></PrivateRoute>
+
       },
       {
         path: "/update/:id",

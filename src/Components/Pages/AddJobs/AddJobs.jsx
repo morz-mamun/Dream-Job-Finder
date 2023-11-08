@@ -62,7 +62,7 @@ const AddJobs = () => {
     </Helmet>
      <div className=" flex items-center justify-center max-w-7xl mx-auto min-h-screen">
       <div className="card-body bg-base-200 rounded-lg">
-        <p className="text-3xl text-center underline underline-offset-4 mb-5">Add Job</p>
+        <p className="text-3xl text-center border-b-4 border-secondary w-fit mx-auto uppercase mb-5">Add Job</p>
         <form onSubmit={handleAddJob}>
           <div className="flex gap-5">
             <div className="form-control w-full">
