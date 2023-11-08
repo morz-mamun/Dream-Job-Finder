@@ -10,7 +10,7 @@ const JobCategory = () => {
 
   return (
     <div className="max-w-7xl mx-auto my-20">
-      <p className="text-5xl text-center mb-10">Job Category</p>
+      <p className="text-5xl text-center mb-10 border-b-4 uppercase border-secondary w-fit mx-auto">Job Category</p>
       <Tabs>
         <TabList>
           <Tab>Web Development</Tab>
