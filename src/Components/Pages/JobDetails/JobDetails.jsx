@@ -34,7 +34,7 @@ const JobDetails = () => {
 
         const bidProject = {price, deadline, userEmail, buyerEmail, jobTitle}
 
-        axios.post('  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/bidprojects', bidProject)
+        axios.post('  https://dream-job-finder-server.vercel.app/bidprojects', bidProject)
         .then(res => {
             if(res.data.acknowledged){
                 Toast.fire({

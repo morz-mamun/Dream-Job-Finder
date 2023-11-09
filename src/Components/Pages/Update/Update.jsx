@@ -49,7 +49,7 @@ const Update = () => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/addjobs/${loadedData[0]._id}`, {
+        fetch(`  https://dream-job-finder-server.vercel.app/addjobs/${loadedData[0]._id}`, {
           method: "PUT",
           headers: {
             'content-type': 'application/json'

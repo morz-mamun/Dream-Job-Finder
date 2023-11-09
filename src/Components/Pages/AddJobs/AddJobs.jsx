@@ -35,7 +35,7 @@ const AddJobs = () => {
     form.reset()
     const newJob = {email, jobTitle, deadline, description, minimumPrice, maximumPrice, category}
 
-    fetch(' https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/addjobs', {
+    fetch(' https://dream-job-finder-server.vercel.app/addjobs', {
       method: "POST",
       headers: {
         'content-type': 'application/json'

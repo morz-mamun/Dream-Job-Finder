@@ -10,7 +10,7 @@ const BidRequest = () => {
 
   useEffect(() => {
     axios
-      .get(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/bidprojects/${user?.email}`)
+      .get(`  https://dream-job-finder-server.vercel.app/bidprojects/${user?.email}`)
       .then((res) => {
         setAllBidProject(res.data);
       });
@@ -18,7 +18,7 @@ const BidRequest = () => {
 
 
   const handleAccept = (id) => {
-    fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/bidprojects/${user?.email}/${id}`, {
+    fetch(`  https://dream-job-finder-server.vercel.app/bidprojects/${user?.email}/${id}`, {
         method: "PATCH",
         headers: {
             'content-type' : 'application/json'
@@ -38,7 +38,7 @@ const BidRequest = () => {
   }
 
   const handleReject = (id) => {
-    fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/bidprojects/${user?.email}/${id}`, {
+    fetch(`  https://dream-job-finder-server.vercel.app/bidprojects/${user?.email}/${id}`, {
         method: "PATCH",
         headers: {
             'content-type' : 'application/json'

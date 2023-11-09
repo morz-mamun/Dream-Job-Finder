@@ -51,7 +51,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/${params.category}/${params.id}`),
+          fetch(`  https://dream-job-finder-server.vercel.app/${params.category}/${params.id}`),
       },
       {
         path: "/mybids",
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
             <MyPostedJobs></MyPostedJobs>
           </PrivateRoute>
         ),
-        // loader: () => fetch('  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/addjobs')
+        // loader: () => fetch('  https://dream-job-finder-server.vercel.app/addjobs')
       },
       {
         path: "/bidRequest",
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({ params }) => fetch(`  https://dream-job-finder-server-4g7fadbl0-mamuns-projects.vercel.app/${params.id}`),
+        loader: ({ params }) => fetch(`  https://dream-job-finder-server.vercel.app/${params.id}`),
       },
     ],
   },
