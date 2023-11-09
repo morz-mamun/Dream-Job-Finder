@@ -16,5 +16,5 @@ Find The Right Jobs
 
 
 ## 🔗 Website Live Link
- [![Website live link](https://img.shields.io/badge/TechNexa-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://technexa-eef36.web.app/)
+ [![Website live link](https://img.shields.io/badge/DreamJob-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://dream-job-finder.web.app/)
 
