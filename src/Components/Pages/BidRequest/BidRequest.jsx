@@ -10,7 +10,7 @@ const BidRequest = () => {
 
   useEffect(() => {
     axios
-      .get(`  https://dream-job-finder-server.vercel.app/bidprojects/${user?.email}`)
+      .get(`https://dream-job-finder-server.vercel.app/bidprojects/${user?.email}`)
       .then((res) => {
         setAllBidProject(res.data);
       });

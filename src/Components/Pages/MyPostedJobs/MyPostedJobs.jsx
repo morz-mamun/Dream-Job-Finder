@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+
 
 import JobCard from "./JobCard";
 import { useState } from "react";
@@ -9,19 +9,21 @@ import { Helmet } from "react-helmet";
 
 const MyPostedJobs = () => {
   const {user} = useAuthProvider()
-    // const loadedJobs = useLoaderData()
+    
   
     
     
     const [allPostedJobs, setAllPostedJobs] = useState([])
    
     useEffect(() => {
-        fetch(`  https://dream-job-finder-server.vercel.app/${user.email}`)
+        fetch(`https://dream-job-finder-server.vercel.app/${user.email}`)
         .then(res => res.json())
         .then(data => {
           setAllPostedJobs(data)
         })
     }, [])
+
+
 
     // console.log(postedJobs);
     console.log(allPostedJobs);
@@ -42,7 +44,7 @@ const MyPostedJobs = () => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`  https://dream-job-finder-server.vercel.app/addjobs/${id}`, {
+                fetch(`https://dream-job-finder-server.vercel.app/addjobs/${id}`, {
                     method: 'DELETE'
                   })
                   .then(res => res.json())

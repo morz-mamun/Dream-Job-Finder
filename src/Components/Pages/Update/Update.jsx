@@ -5,6 +5,7 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 
 const Update = () => {
   const loadedData = useLoaderData();
+  console.log(loadedData);
   const { user } = useAuthProvider();
   const navigate = useNavigate();
 
@@ -49,7 +50,7 @@ const Update = () => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`  https://dream-job-finder-server.vercel.app/addjobs/${loadedData[0]._id}`, {
+        fetch(`https://dream-job-finder-server.vercel.app/addjobs/${loadedData[0]._id}`, {
           method: "PUT",
           headers: {
             'content-type': 'application/json'
@@ -104,7 +105,7 @@ const Update = () => {
               </label>
               <input
                 type="text"
-                defaultValue={loadedData[0].jobTitle}
+                defaultValue={loadedData[0]?.jobTitle}
                 name="jobTitle"
                 placeholder="Job Title"
                 className="input input-bordered"
@@ -119,7 +120,7 @@ const Update = () => {
               </label>
               <input
                 type="date"
-                defaultValue={loadedData[0].deadline}
+                defaultValue={loadedData[0]?.deadline}
                 name="deadline"
                 placeholder="Deadline"
                 className="input input-bordered"
@@ -133,7 +134,7 @@ const Update = () => {
               </label>
               <input
                 type="text"
-                defaultValue={loadedData[0].description}
+                defaultValue={loadedData[0]?.description}
                 name="description"
                 placeholder="Description"
                 className="input input-bordered"
@@ -148,7 +149,7 @@ const Update = () => {
               </label>
               <input
                 type="text"
-                defaultValue={loadedData[0].minimumPrice}
+                defaultValue={loadedData[0]?.minimumPrice}
                 name="minimumPrice"
                 placeholder="Minimum Price"
                 className="input input-bordered"
@@ -162,7 +163,7 @@ const Update = () => {
               </label>
               <input
                 type="text"
-                defaultValue={loadedData[0].maximumPrice}
+                defaultValue={loadedData[0]?.maximumPrice}
                 name="maximumPrice"
                 placeholder="Maximum Price"
                 className="input input-bordered"

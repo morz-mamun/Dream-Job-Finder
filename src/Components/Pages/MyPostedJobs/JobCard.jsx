@@ -13,7 +13,7 @@ const JobCard = ({ job, handleDelete }) => {
     category,
   } = job;
 
-
+console.log(_id);
   
   return (
     <div className="card rounded-lg hover:bg-gray-600 hover:text-white rounded-t-md border-2 border-black border-s-fuchsia-300 h-full bg-pink-50">
@@ -37,7 +37,7 @@ const JobCard = ({ job, handleDelete }) => {
         </h1>
       </div>
       <div className="text-center mb-5 space-x-5">
-        <Link to={`/update/${_id}`}>
+        <Link to={`/update/${category}/${_id}`}>
           <button className="btn btn-secondary text-black">Update</button>
         </Link>
         <button onClick={() => handleDelete(_id)} className="btn btn-secondary text-black">Delete</button>
