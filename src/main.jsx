@@ -16,6 +16,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import Update from "./Components/Pages/Update/Update.jsx";
 import BidRequest from "./Components/Pages/BidRequest/BidRequest.jsx";
 import Error from "./Components/Pages/Error/Error.jsx";
+import Contact from "./Components/Pages/Contact/Contact.jsx";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         path: "/bidRequest",
         element: <PrivateRoute><BidRequest></BidRequest></PrivateRoute>
 
+      },
+      {
+        path: "/contact",
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>
       },
       {
         path: "/update/:category/:id",
